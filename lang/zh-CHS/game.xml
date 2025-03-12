@@ -227,8 +227,8 @@
             • 在瓦尔哈拉增加建造房子和收税行动 - 一个新的金块获取手段需要制造公会和重商主义.<br>
             • 把强化村庄重命名为初始小镇<br>
             • 在初始小镇新增一个漫步行动以解锁其他行动<br>
-            • 新增一个破坏电缆塔行动用以降低尖塔法力消耗<br>
-            • 大幅提高尖塔法力消耗, 主要是用来抵消电缆塔行动<br>
+            • 新增一个破坏能量塔行动用以降低尖塔法力消耗<br>
+            • 大幅提高尖塔法力消耗, 主要是用来抵消能量塔行动<br>
             • 允许空间魔法对更多内容生效<br>
             • 修复盛宴使它正确的对个人战斗力生效<br>
             • 训练重商主义现在会消耗声望<br>
@@ -409,7 +409,7 @@
         <resource>
             <title>金块:</title>
             <id>gold</id>
-            <desc>Coins to buy mana crystals and other items with.</desc>
+            <desc>用来购买法力水晶和其他物品的货币.</desc>
         </resource>
         <resource initially_hidden="true">
             <title>声望:</title>
@@ -444,12 +444,12 @@
         <resource initially_hidden="true">
             <title>血液:</title>
             <id>blood</id>
-            <desc>它的再生能力令它备受推崇. </desc>
+            <desc>它的再生能力令它备受推崇.</desc>
         </resource>
         <resource initially_hidden="true">
             <title>古董:</title>
             <id>artifacts</id>
-            <desc>Various old rings, bracelets, amulets, and pendants. They look like they're worth a pretty penny.</desc>
+            <desc>各种旧戒指、手链、护身符和吊坠. 看起来值不少钱.</desc>
         </resource>
         <resource initially_hidden="true">
             <title>支持度:</title>
@@ -467,9 +467,9 @@
             <desc>在瓦尔哈拉建造的房子. 你可以向租户收租.</desc>
         </resource>
         <resource initially_hidden="true">
-            <title>电缆塔:</title>
+            <title>能量塔:</title>
             <id>pylons</id>
-            <desc>Lingering fragments from the destroyed pylon.</desc>
+            <desc>被摧毁的塔柱留下的残余碎片.</desc>
         </resource>
         <resource initially_hidden="true">
             <title>僵尸:</title>
@@ -484,7 +484,7 @@
         <resource initially_hidden="true">
             <title>完成的地图:</title>
             <id>completedMap</id>
-            <desc>You've mapped out some part of the world. The Explorer's guild would happily buy this knowledge off of you.</desc>
+            <desc>你已经绘制了世界的某些部分. 探险者公会会很乐意买下你的这些知识.</desc>
         </resource>
         <resource initially_hidden="true">
             <title><![CDATA[<img src="img/heart.svg" class="smallIcon">]]></title>
@@ -520,7 +520,7 @@
         <resource initially_hidden="true" no_count="true">
             <title><![CDATA[<img src="img/pegasus.svg" class="smallIcon">]]></title>
             <id>pegasus</id>
-            <desc>长者天使翅膀的马. 它在云上跑起来就像在地上一样轻松.</desc>
+            <desc>长着天使翅膀的马. 它在云上跑起来就像在地上一样轻松.</desc>
         </resource>
         <resource initially_hidden="true" no_count="true">
             <title><![CDATA[<img src="img/purchaseKey.svg" class="smallIcon">]]></title>
@@ -530,7 +530,7 @@
         <resource initially_hidden="true" no_count="true">
             <title><![CDATA[<img src="img/temporalStone.svg" class="smallIcon">]]></title>
             <id>stone</id>
-            <desc>A strange rock that seems unaffected by the time loops.</desc>
+            <desc>一块似乎不受时间循环影响的奇怪岩石.</desc>
         </resource>
     </tracked_resources>
     <time_controls>
@@ -549,122 +549,67 @@
         <story_title>故事</story_title>
         <stories>
             <story num="0"> <!--Beginning of Game-->
-                You're a simple courier, on a long trip to deliver a high priority package. Just as you entered town,
-                you tripped - breaking your glasses - and the package burst open, spilling a strange liquid on you.
-                Immediately, your meager amount of mana started draining rapidly. Right as your mana completely ran out, 
-                you found yourself back in the moment the liquid was absorbed into your skin, with your tiny reserves
-                filled... yet draining just as before. This happened again and again, the world resetting with you,
-                until you decided you had to figure out a way to prolong how long these 'loops' were. Mana crystals are
-                often stored in pottery around town, perhaps you'll start there ...
+                你是个普通的快递员，正在长途旅行送一个重要的包裹。刚进城时，你绊倒了——摔坏了眼镜——包裹也打开了，奇怪的液体洒在了你身上。立刻，你微薄的法力开始迅速消耗。就在你的法力完全耗尽的那一刻，你发现自己回到了液体被吸收进皮肤的瞬间，你的微小法力储备充满了……但又像之前一样在消耗。这一切一次又一次地发生，世界和你一起重置，直到你决定必须想办法延长这些“循环”的时间。法力水晶通常存放在城里的罐子里，也许你可以从那里开始……
             </story>
             <story num="1"> <!--First Soulstone-->
                 您到达了地牢的终点，一个踏板上，悬浮着一个散发着柔和光芒的球体。那就是地牢核心，不过也只是第一层的核心。您抓住了它，它的精华开始涌入您的身体，它的力量逐渐为您所用。它蕴含的能量虽然不多，但毕竟这个地牢也不大。您一定会再回来的，因为获得这些能量时您同时也获得了外来的知识，知道这些能量将永远与您同在。
             </story>
             <story num="2"> <!--No Soulstone-->
-                You reach the end of the dungeon again, but for the first time the core isn't glowing. It's always been
-                thought that dungeon cores feed upon the mana spent around them, but you're beginning to think the
-                essence of its previous incarnations drains it somehow. It doesn't always happen, but you'll need to
-                put more mana into the world to reap the core's benefits out of it. You shrug, accepting yet another
-                oddity of the loops.
+                你再次到达了地牢的尽头，但这次核心却没有发光。一直以来，人们都认为地牢核心会吸收周围消耗的魔力，但你开始怀疑，它前几次轮回的精华可能以某种方式耗尽了。这种情况并不总是发生，但你需要向这个世界注入更多的魔力，才能从核心中获取好处。你耸了耸肩，接受了这个循环中的又一个怪现象。
             </story>
-			<story num="3"> <!--Change 3 to Forest-->
-				After spending most of a loop preparing, you're finally ready to leave Beginnersville. In a way, you're
-				going to miss this town, and the thought of leaving almost brings a tear to your eye - until you realize
-				you'll just be back next loop. Grumbling, you set off, hiking into the forest. By the time you're
-				ready to make camp, you're in a good mood again. The forest is beautiful, teeming with life, and looks
-				to have boundless places to explore. Best of all, on your way here, you passed several locations that
-				are absolutely saturated with mana - you think you'll check those out first.
-		</story>
-		    <story num="4"> <!--Merchanton-->
-				It's always nice, after doing the same dull tasks over and over, to make your way through the forest and 
-                get to do something new. Whether you're exploring, hunting, learning something or just sitting by the 
-                waterfall, the forest always makes a great backdrop. However, as pleasant as it's been here, it's time to 
-                move on, at least for now. It would be a long trip, but luckily, after all your exploring, you know some 
-                shortcuts, and before long, Merchanton emerges out of the trees. There's a lot to do here! Maybe one of 
-                the guilds can help you with your looping problem! Or maybe there's a book in the library that can lead you 
-                to a solution! Or maybe... or maybe... that all sounds like a lot of work, and you have been going through a
-			</story>
-			<story num="5"> <!--Change 5 to Mt. Olympus-->
-				a pickaxe and start the climb! Reaching Mt. Olympus takes a lot of climbing but along the way, you discover these mana
-				geysers which look like they can be harvested with a pickaxe. You also discover runes scattered around the mountain, maybe
-				deciphering them might be useful? Finally, about half way up this mountain, you discover a massive cavern with room to take a
-				break climbing and explore it. You met these Friendly Trolls in these caverns. Sadly, they don't sell snowcones...
-			</story>
-			<story num="6"> <!--Good Reputation Story--> <!--Change 6 to Valhalla-->
-				You have finally reached the top of Mt. Olympus! There is a giant door at the very top and a voice rings out: "Mortal! You stand
-                to be JUDGED by the GODS! Step forth and face JUDGEMENT!" After waiting for what feels like hours, the voice rings out once more: 
-                "You may PASS!". You enter the wonderful, otherwoldly home of the gods, Valhalla, where... you spot a tourist guide almost immediately.
-                Unexpected as the guide is, having a God show you around turns out to be well worth the money. Several Gods busy themselves with 
-                house-to-house charity collections, there are museums and shops where you can find wonders beyond the reaches of mere mortals,
-                and you even learn there are opportunities to become a registered citizen, even as a mere mortal! Whether you want to study at the
-                Wizard's college or fight alongside the Valkyries, there are many benefits to living among the Gods.
-			</story>
-			<story num="7"> <!--Bad Reputation Story--> <!--Change 7 to Startington-->
-                A booming voice rings out as the clouds part overhead, and you instinctively cover your ears as every word makes your bones rattle:
-                "YOU HAVE BEEN JUDGED!" The world around you becomes a blur, and it takes a second before you realize you are falling off the side of
-                Mt. Olymups. Even as the wind pulls on your skin, you can tell that you're not just falling in a physical sense as the world around
-                you is drained of every last bit of colour, the last streak of purple light off in the distance by the time you realize you've stopped
-                falling some time ago. Pushing yourself to your feet, you look around and find yourself right in front of a very familiar town-gate.
-                The purple light is coming from a massive pillar reaching up from the center of town, casting the only light for miles around in this,
-                the Shadow Realm. Oh, and the sign on the gates states this place is called "Startington." Evidently, you're not in any familiar territory
-                any more.
-			</story>
-			<story num="8"> <!--Change 8 to Jungle Path-->
-                Shadow realm or not, there are enough things that haven't changed that you still lean on your established routine. Right down
-                to the part where you have to get some supplies to brave the jungle just outside the small town, from a local trader. Too bad
-                this one is quite selectively deaf to your attempts at haggling, but hey. You've gotten good enough at budgeting and scrounging
-                up coins that you could pay him in the end. Turning your eyes to the narrow trail through the dense jungle before you, you set
-                foot among the wild trees, noting the ruins among the tree-trunks. Wonder if this place had always been a jungle...
-			</story>
-			<story num="9"> <!--Made the Looping Potion--> <!--Change 9 to Looping Potion-->
-                Learning the finer points of alchemy, of the subtle rules underpinning the "simple" brewing of potions had been a long, exhausting
-                trial, but since you have nothing but time on your hands, you have become an expert by any standard. As you let a bundle of herbs
-                soak in a mana geyser, you double-check your notes and prepare your equipment. The brew itself is finnicky but finally, you fill
-                a bottle with the fruits of your Great Work. The Loop Potion, the exact same brew that got you into this situation. 
-                ...Reflecting for a moment, you wonder if there was much of a point to all of this. Not like making more of the stuff will get you
-                out of the loops.
-			</story>
-			<story num="10"> <!--Change 10 to Commerceville-->
-                Exploring the jungle ruins took quite a lot of time, and you just barely manage to make your way to the other side before the imposing
-                gate among the trees closes. You mentally take note that you're on a time limit if you want to make it here on future loops, and that
-                the pattern of the "normal" world still holds: On the other side of the jungle lies a small-ish city that proudly identifies itself
-                as "Commerceville, the heart of trade!" according to the statue along the way to the city gates. While just wandering is liable to get
-                you in trouble with some of the townsfolk, there is a helpful tourist guide willing to show you around for a "reasonable" sum. Even if
-                the guide looks a little too eager to lead you down the city's many narrow alleyways, you can't deny that learning about the Thieves guild
-                was worth the risk to get there. Finally, at the end of the tour, you learn that your guide also works for the tax collectors and really
-                can't stay to chat. At least your guide was nice enough to show you to the Bank. There is an imposing hooded figure leaning against a wall
-                of the bank, maybe they can tell you something more...
-			</story>
-			<story num="11"> <!--Change 11 to Valley of Olympus-->
+            <story num="3"> <!--Change 3 to Forest-->
+                在几乎耗尽一个循环的时间进行准备之后，你终于要离开新手村了。在某种程度上，你会怀念这个小镇，离开的念头几乎让你眼角泛起泪光——直到你意识到下一个循环你还会回到这里。你嘟囔着，踏上了旅程，徒步进入了森林。当你准备扎营时，心情已经重新变得愉悦。森林美丽而生机勃勃，似乎有着无穷无尽的地方等待你去探索。最棒的是，在来这里的路上，你经过了几个魔力极其浓郁的地点——你打算先去那些地方一探究竟。
+            </story>
+            <story num="4"> <!--Merchanton-->
+                在重复了无数次单调乏味的任务之后，穿越森林去做些新鲜事总是令人愉快的。无论你是探索、狩猎、学习新知识，还是仅仅坐在瀑布旁，森林始终是绝佳的背景。然而，尽管这里令人心旷神怡，现在也是时候继续前行了，至少暂时如此。这将是一段漫长的旅程，但幸运的是，在经历了这么多探索之后，你知道一些捷径，不久之后，商人之城便从树丛中显现出来。这里有许多事情可做！也许某个公会能帮你解决循环的问题！或者图书馆里的某本书能指引你找到答案！又或者……又或者……这一切听起来似乎都需要不少努力，而你最近已经经历了很多。也许在这一切之前，你应该先找家酒吧，喝上一杯。
+            </story>
+            <story num="5"> <!--Change 5 to Mt. Olympus-->
+                你在商人之城探索了各个公会的选项，或许还在此过程中结交了几位公会朋友，但现在是时候拿起镐子，开始攀登了！到达奥林匹斯山需要大量的攀爬，但沿途你发现了这些可以用镐子开采的魔力喷泉。你还发现了散布在山上的符文，也许破译它们会有所用处？最终，在攀登到半山腰时，你发现了一个巨大的洞穴，这里有足够的空间让你稍作休息并探索一番。你在这些洞穴中遇到了友好的巨魔。遗憾的是，他们并不卖雪糕……
+            </story>
+            <story num="6"> <!--Good Reputation Story--> <!--Change 6 to Valhalla-->
+                你终于登上了奥林匹斯山的顶峰！山顶上有一扇巨大的门，一个声音响彻云霄：“凡人！你将接受众神的审判！上前来，面对你的审判！”在等待了仿佛数小时之后，那个声音再次响起：“你可以通过了！”你走进了众神那奇妙而超凡的家园——瓦尔哈拉，在那里……你几乎立刻发现了一名导游。虽然导游的出现出人意料，但事实证明，让一位神祇带你四处参观绝对物超所值。几位神祇忙着挨家挨户进行慈善募捐，这里有博物馆和商店，你可以找到超越凡人想象的奇迹，甚至了解到即使作为凡人，也有机会成为这里的注册公民！无论你是想在巫师学院学习，还是与女武神并肩作战，生活在众神之中都有诸多好处。
+            </story>
+            <story num="7"> <!--Bad Reputation Story--> <!--Change 7 to Startington-->
+                一声洪亮的声音在头顶的云层中回荡，你本能地捂住耳朵，因为每一个字都让你的骨头震颤不已：“你已被审判！”周围的世界变得模糊，片刻之后你才意识到自己正从奥林匹斯山的侧面坠落。即使风拉扯着你的皮肤，你也能感觉到这不仅仅是物理意义上的坠落，因为周围的世界正在失去最后一丝色彩，当你意识到自己早已停止坠落时，最后一缕紫色的光芒在远处消失。你挣扎着站起来，环顾四周，发现自己正站在一座非常熟悉的城镇大门前。那紫色的光芒来自城镇中心一根巨大的光柱，它是这片阴影领域中几英里内唯一的光源。哦，大门上的牌子写着这个地方叫“起始镇”。显然，这里已不再是你熟悉的任何地方。。
+            </story>
+            <story num="8"> <!--Change 8 to Jungle Path-->
+                即使身处阴影领域，仍有足够多未曾改变的事物让你能依赖早已习惯的流程——甚至包括从本地商人那里采购物资，准备探索小镇外的丛林。可惜这位商人对你的讨价还价充耳不闻，但好在通过精打细算和搜刮硬币，你最终还是付清了费用。目光转向眼前密林中狭窄的小径，你踏入野生丛林，注意到树干间的废墟。不知这里是否自古便是丛林……
+            </story>
+            <story num="9"> <!--Made the Looping Potion--> <!--Change 9 to Looping Potion-->
+                学习炼金术的精细技巧与“简单”药水背后微妙的规则，曾是一段漫长而疲惫的试炼，但既然你唯一拥有的就是时间，如今的你已是当之无愧的专家。将一捆草药浸泡在魔力喷泉中后，你反复核对笔记并整理工具。尽管调配过程繁琐，你终于将一瓶“伟大作品”收入囊中——那正是将你卷入循环的药剂：循环药剂。……沉思片刻，你不禁怀疑这一切是否有意义。毕竟，即便再造出更多药剂，似乎也无法助你逃离循环。
+            </story>
+            <story num="10"> <!--Change 10 to Commerceville-->
+                探索丛林废墟耗费了大量时间，你勉强赶在巨树间的宏伟城门关闭前抵达另一侧。你暗自记下：若想在未来的循环中重返此地，必须注意时间限制。同时，“常规”世界的规则依然适用——丛林彼端的小城沿路立着雕像，自豪地宣称此处是“商贸城，贸易之心！”。尽管闲逛可能招致某些镇民的敌意，但一位热心的导游愿意以“合理”价格带你游览。即便导游对引领你穿行狭窄巷道的热情显得可疑，你不得不承认，探听到盗贼公会的存在已值得冒险。旅程尾声，导游坦言自己也为税务官工作，无法久留。好在临别前，他贴心将你引至银行。一位身披斗篷的神秘身影正倚在银行墙边，或许能提供更多线索……
+            </story>
+            <story num="11"> <!--Change 11 to Valley of Olympus-->
                 <![CDATA[
-                    You can't help but chuckle as you make your way out of the Bank's "Big Shot" office, keys to the <i>entirety</i> of Commerceville in hand.
-                    Sure, the loan wasn't cheap and you'd probably get into a lot of trouble if you'd stick around for the first payment, but there's no way
-                    your mana reserves will last that long. Looking ahead, you blink at the first blatant difference between this world and the normal one:
-                    There is no Mt. Olympus. Instead, there is a large, wide valley with the ruins of a tower in the middle of it. It takes a bit of Doing,
-                    but you eventually find a stone covered in familiar runic script: "Children of the land! We, the seven guardian deities, challenge you!
-                    Find us, fight us, and claim the throne of the gods!" ...Oh well, time for a bit of deicide. The "throne of the gods" sounds like just the
-                    kind of thing that could break you out of the loops, and they <i>did</i> issue a challenge for anyone to find. Step one will be to reach them.
+                    手握商贸城全境钥匙走出银行“大人物”办公室时，你忍不住轻笑。诚然，这笔贷款代价高昂，若久留至首期还款日定会惹上麻烦，但你的魔力储备绝无可能撑到那时。举目远眺，你愕然发现此界与常规世界的首个显著差异：奥林匹斯山消失了。取而代之的是一片广阔山谷，中央矗立着高塔废墟。几经周折，你找到一块刻满熟悉符文的石碑：“大地的子民！吾等七位守护神祇在此挑战汝！寻吾辈，战吾辈，夺取众神王座！”……好吧，弑神时刻到了。“众神王座”听来正是打破循环的关键之物，何况他们自己发出了挑战。首要任务，便是找到他们。
                 ]]>
-			</story>
-			<story num="12"> <!--Finally--> <!-- Change 12 to Ending the Loop-->
-				<![CDATA[
-				   您终于成功了！您击败了众神，使时间恢复了正常的流动。您可以随时停止循环了。但您也可以继续循环，只要您想要这么做。循环终有时……感谢您游玩我的放置循环模组！也感谢Stop_Sign制作了及其优秀的原版游戏，还有Omsi制作了Omsi版。您二位给我的启发或许超过了二位的想象罢。最后，希望所有玩家都玩的开心！(比心)<br>
-				   ————作者Lloyd
+            </story>
+            <story num="12"> <!--Finally--> <!-- Change 12 to Ending the Loop-->
+                <![CDATA[
+				   你成功了！你击败了神祇本尊，让时间重归正轨。此刻起，你可随时终止循环。
+				   但话说回来，你亦可选择继续。反正，来日方长……
+				   感谢游玩我的《Idle Loops》同人模组！
+				   特别致敬天才开发者Stop_Sign创造了这款杰作，以及Omsi的模组版本。
+				   二位的灵感远超你们想象。
+				   愿各位玩得开心！<3 <br>
+                    ——Lloyd
 				]]>
             </story>
         </stories>
         <bonus_seconds>
             <title>奖励时间</title>
             <main_text><![CDATA[
-          While this bonus is on, you get 4 extra seconds per second (5x faster).<br>
+          激活此奖励时. 每秒可获得额外4秒 (速度提升5倍).<br>
           离线或暂停时每秒可以获得 1 点奖励点. (离线奖励最多 1 个月)<br>
-          奖励点开关
+          当前状态：
         ]]></main_text>
             <state>
-                <on>开</on>
-                <off>关</off>
+                <on>启用</on>
+                <off>关闭</off>
             </state>
-            <counter_text>总奖励时间</counter_text>
+            <counter_text>累计奖励时间</counter_text>
         </bonus_seconds>
     </time_controls>
     <stats>
@@ -727,18 +672,18 @@
             <bonus_xp>奖励经验</bonus_xp>
             <mana_cost_reduction>法力消耗减少</mana_cost_reduction>
             <explanation><![CDATA[
-          Each stat level reduces the relevant part of an action's mana cost by a percentage.<br>
+          每级属性可以按比例降低一个行动的属性对应部分的魔力消耗.<br>
           天赋经验获取是能力经验的 1% , 并且循环不会重置它.<br>
           天赋可以给予能力经验 (1+(天赋等级)^0.4/3) 倍率加成.<br>
-          一个行动能获得的经验是 (原始法力 / 当前法力) * (天赋加成) 每刻度.<br>
-          Total Mult is the product of your talent and soulstone bonuses.<br><br>
-          举例：交朋友消耗800法力且属性比例为 <div class="bold">Int</div> 10% <div class="bold">Cha</div> 80% <div class="bold">Soul</div> 10%.<br>
-          意思是其中80法力是 <div class="bold">Int</div>, 另外 80 是 <div class="bold">Soul</div>, 然后剩余的 640 是 <div class="bold">Cha</div>.<br>
-          如果你的 <div class="bold">Cha</div> 在行动开始时等级为 20 , 加成就是 x1.2 也就是实际法力消耗为 640 / 1.2 = 533.33<br>
-          再加上 <div class="bold">Soul</div> 和 <div class="bold">Int</div> 的 160 法力消耗, 总行动消耗 (向下取整) 应该是 694, 也就是 ~87% 的总消耗.<br>
-          行动将提供 (800/694)*(1+(天赋)^0.4/3) 经验每法力总计 694 法力.]]></explanation>
+          一个行动单位法力获得的经验是 (原始法力 / 实际消耗法力) * (天赋加成).<br>
+          总倍率为天赋与灵魂石加成的乘积.<br><br>
+          举例：<div class="bold">结识朋友</div> 基础消耗 800 法力, 属性比例为 <div class="bold">智力</div> 10% <div class="bold">魅力</div> 80% <div class="bold">灵魂</div> 10%.<br>
+          意思是 <div class="bold">智力</div> 控制 80 法力, <div class="bold">灵魂</div> 控制 80 法力, 然后剩余的 640 法力由 <div class="bold">Cha</div> 控制.<br>
+          如果你的 <div class="bold">魅力</div> 在行动开始时等级为 20 , 加成为 x1.2 , 也就是实际法力消耗为 640 / 1.2 = 533.33<br>
+          再加上 <div class="bold">灵魂</div> 和 <div class="bold">智力</div> 的 160 法力消耗, 总行动消耗 (向上取整) 应该是 694, 也就是约 87% 的原始消耗.<br>
+          行动的每法力消耗将提供 (800/694)*(1+(天赋)^0.4/3) 经验, 总计算 694 法力.]]></explanation>
             <graph_legend><![CDATA[
-          点击传说以显示/隐藏它们.<br>
+          点击图例可显示/隐藏对应图像.<br>
           在刚开始, 等级和天赋对游戏的影响很小.<br>
           悬停在能力上获取更多信息.]]></graph_legend>
         </tooltip>
@@ -768,11 +713,11 @@
         <practical>
             <label>实用魔法</label>
             <desc>魔法手, 变戏法, 侦测魔法, 以及一些其他实用的小魔法.</desc>
-            <desc2><![CDATA[踢罐子和野生法力的法力消耗乘以 初始消耗 / (1 + 等级 / 100) (向上取整).<br>
-      The following actions get 1% more gold per level in their level range (rounded down).<br>	
-      1-200 Pick Locks<br>
-      101-300 Short Quests<br>
-      201-400 Long Quests<br>
+            <desc2><![CDATA[踢罐子和野生法力的法力消耗降低至 原始消耗 / (1 + 等级 / 100) (向上取整).<br>
+      下列行动在对应等级区间内, 每级增加 1% 金币收益 (向下取整).<br>
+      1-200 开锁<br>
+      101-300 短任务<br>
+      201-400 长任务<br>
       当前使成本乘以 <div id='skillBonusPractical'></div>x.]]></desc2>
         </practical>
         <alchemy>
@@ -807,23 +752,23 @@
         <spatiomancy>
             <label>空间魔法</label>
             <desc>谁能想到空间魔法竟然这么有用!</desc>
-            <desc2><![CDATA[法力喷泉和法力井消耗乘以 初始 / (1 + 等级 / 100).<br>
-            Houses to build increased by 1% per level from 1 - 500.<br>
-            The following actions are increased by 0.5% per level in their level range.<br>
-            101-300 Locked houses<br>
-            201-400 Short quests to finish<br>
-            301-500 Long quests to finish<br>
-            401-600 Animals in the forest<br>
-            501-700 Herbs to gather<br>
-            601-800 Possible suckers<br>
-            701-900 Soulstones to mine<br>
-            801-1000 Artifacts to take<br>
-            901-1100 People to ask for donations<br>
-            1001-1200 Buildings to check for pylons<br>
-            1101-1300 Pockets to pick<br>
-            1201-1400 Warehouses to rob<br>
-            1301-1500 Insurance companies to defraud<br>
-            Currently multiplying costs by <div id="skillBonusSpatiomancy">0.971</div>x.]]></desc2>
+            <desc2><![CDATA[法力喷泉和法力井消耗降低至 原始消耗 / (1 + 等级 / 100).<br>
+            1-500 每级提升1%可建造房屋数量.<br>
+            下列行动在对应等级区间内, 每级提升0.5%效果.<br>
+            101-300 锁住的屋子<br>
+            201-400 可完成的短任务<br>
+            301-500 可完成的长任务<br>
+            401-600 森林里的动物<br>
+            501-700 可采集的草药<br>
+            601-800 可骗的傻子<br>
+            701-900 可挖掘的灵魂石<br>
+            801-1000 可获取的古董<br>
+            901-1100 募捐对象<br>
+            1001-1200 可检查的建筑(能量塔)<br>
+            1101-1300 可偷的钱包<br>
+            1201-1400 可抢劫的仓库<br>
+            1301-1500 可诈骗的保险公司<br>
+            当前总成本倍率为 <div id="skillBonusSpatiomancy">0.971</div>x.]]></desc2>
         </spatiomancy>
 		<mercantilism>
 			<label>重商主义</label>
@@ -838,7 +783,7 @@
             当前给予 <div id='skillBonusDivine'></div>x 灵魂石.]]></desc2>
         </divine>
         <commune>
-            <label>Communion</label>
+            <label>通灵</label>
             <desc>你的血祭使你与黑暗生物的沟通更加顺畅.</desc>
             <desc2><![CDATA[黑暗仪式的灵魂石成本乘以 初始 / (1 + 等级 / 100).<br>
             当前成本倍率 <div id='skillBonusCommune'></div>x.]]></desc2>
@@ -948,7 +893,7 @@
         </town2>
         <town3>
             <name>奥林匹斯山</name>
-            <desc><![CDATA[You could have taken that path to the other town, but no! You just <i>had</i> to go to Mt. Olympus, didn't you. But anyways, while you're here, thanks to being neither a canine nor old, you can learn a few new tricks. And kill some innocent trolls while you're at it.]]></desc>
+            <desc><![CDATA[你本可以选那条路去另一个镇子, 但偏不! 你<i>偏要</i>去奥林匹斯山, 是吧. 总之, 既然来都来了, 托你这既非犬类也不老朽的福, 倒是能学点新本事. 顺便还能杀几只无辜的巨魔玩玩.]]></desc>
         </town3>
         <town4>
             <name>瓦尔哈拉</name>
@@ -956,19 +901,19 @@
         </town4>
         <town5>
             <name>初始小镇</name>
-            <desc>A once familiar place, now crawling with shadows and ominous feelings of wasted sick days. There stands a large pillar of gloomy purple light in the center of it all, emanating from a spire surrounded by black clouds. The pillar seems to be the only source of light in town, though it's connected to 10 locations in town with weaker beams. Maybe you should check those spots out.</desc>
+            <desc>这个曾经熟悉的地方，如今爬满阴影与虚度病假的不祥预感。城镇中心矗立着阴郁的紫色光柱，从被黑云环绕的尖塔中散发出来。光柱似乎是镇上唯一的光源，尽管有十道较弱的射线连接着镇内各个地点。也许你该去探查这些光点。</desc>
         </town5>
         <town6>
             <name>丛林小路</name>
-            <desc>A twisting jungle that seems determined to swallow you in its depths. All the same, you can hear people somewhere in the near distance and magical herbs growing by the bushel.</desc>
+            <desc>蜿蜒曲折的丛林仿佛要将你吞噬在它的幽邃中。尽管如此，你仍能听见不远处的人声，还有成捆生长的魔法草药。</desc>
         </town6>
         <town7>
             <name>商业都市</name>
-            <desc>A central hub of commerce in this dark, dour place. Everyone here is looking to make a buck and you don't get the feeling that "honest work" is paying much here.</desc>
+            <desc>这个阴郁黑暗之地的贸易枢纽。每个人都想捞钱，而"正经工作"在这里似乎并不吃香。</desc>
         </town7>
         <town8>
             <name>奥林匹斯山谷</name>
-            <desc>A mountain-shaped hole in the ground. It is ever so faint, but even here in this dark realm, you can feel the presence of the gods looking down upon you.</desc>
+            <desc>地面上的山脉形巨坑。尽管极其微弱，但即便在这黑暗领域，你仍能感受到神灵凝视着你的存在。</desc>
         </town8>
     </towns>
     <talents>
@@ -976,7 +921,7 @@
         <calculated_shattering>
             <name>精确击碎</name>
             <desc><![CDATA[
-            Practicing your Shattering technique to get through all these pots as quickly as possible seems surprisingly productive.<br>Reduces the mana cost of <span class="localized" data-lockey="actions>smash_pots>name"></span> by 1 per level.
+            练习你的击碎技能以尽快打穿所有陶罐，这种方式竟出奇高效.<br><span class="localized" data-lockey="actions>smash_pots>name"></span>的法力消耗每等级减少1点.
         ]]></desc>
         </calculated_shattering>
         <no_frill_frames>
@@ -2026,7 +1971,7 @@
                 <name>逃离蒸汽通道</name>
                 <name>击退蜘蛛</name>
                 <name>回避爆炸符文</name>
-                <name>关闭小型电缆塔</name>
+                <name>关闭小型能量塔</name>
                 <name>击败黑暗融合兽</name>
                 <name>清理楼层</name>
             </segment_names>
@@ -2562,10 +2507,10 @@
             <story_4><![CDATA[<b>Drawn from an empty well:</b>⮀ You're too late. As you try and pull any little droplet you can get, the well just stays every bit as empty as all the other ones around town. You resolve to pick up the pace and get here earlier, next time.]]></story_4>
         </mana_well>
         <destroy_pylons>
-            <label>摧毁电缆塔</label>
-            <label_done>电缆塔已摧毁</label_done>
-            <info_text1>具有电缆塔的建筑物剩余</info_text1>
-            <info_text2>具有电缆塔的建筑物总计</info_text2>
+            <label>摧毁能量塔</label>
+            <label_done>能量塔已摧毁</label_done>
+            <info_text1>具有能量塔的建筑物剩余</info_text1>
+            <info_text2>具有能量塔的建筑物总计</info_text2>
             <info_text3>还没检查过的建筑物</info_text3>
             <tooltip><![CDATA[
             There are strange pylons humming with energy in the abandoned buildings of this town. You're not sure why, but you feel compelled to break them.<br>
@@ -2613,7 +2558,7 @@
                 <name>逃离蒸汽通道</name>
                 <name>击退蜘蛛</name>
                 <name>回避爆破符文</name>
-                <name>关闭小型电缆塔</name>
+                <name>关闭小型能量塔</name>
                 <name>击败黑暗融合怪</name>
                 <name>清理楼层</name>
             </segment_names>
@@ -2645,9 +2590,12 @@
                 <name>Avoid the Spikes</name>
                 <name>Transform the Dead</name>
             </segment_names>
-            <story_1><![CDATA[<b>Floor 1 completed:</b>⮀ Dungeon-crawling at a distance is a hassle, but watching one of your zombies get turned into undead shish-kebob very quickly convinces you this place isn't worth going in yourself. Besides, the corpse-filled alcoves just before the way down to the next floor let you refil (and then some) your army anyway.]]></story_1>
-            <story_2><![CDATA[<b>Floor 10 completed:</b>⮀ You can't help but feel that whoever made this place was looking into the future, what with how you always end up with exactly one more zombie than you started the floor with; whether you lose all but one or none at all, you've not even once got more than 1 additional zombie.]]></story_2>
-            <story_3><![CDATA[<b>Floor 25 completed:</b>⮀ With a sigh, you give your zombies a nod as they smash into the glowing sphere that's been ensuring this place is crawling with specters of every stripe for so very long. While having a larger workforce is nice and all, this still feels like a waste of time.]]></story_3>
+            <story_1>
+                <![CDATA[<b>Floor 1 completed:</b>⮀ Dungeon-crawling at a distance is a hassle, but watching one of your zombies get turned into undead shish-kebob very quickly convinces you this place isn't worth going in yourself. Besides, the corpse-filled alcoves just before the way down to the next floor let you refil (and then some) your army anyway.]]></story_1>
+            <story_2>
+                <![CDATA[<b>Floor 10 completed:</b>⮀ You can't help but feel that whoever made this place was looking into the future, what with how you always end up with exactly one more zombie than you started the floor with; whether you lose all but one or none at all, you've not even once got more than 1 additional zombie.]]></story_2>
+            <story_3>
+                <![CDATA[<b>Floor 25 completed:</b>⮀ With a sigh, you give your zombies a nod as they smash into the glowing sphere that's been ensuring this place is crawling with specters of every stripe for so very long. While having a larger workforce is nice and all, this still feels like a waste of time.]]></story_3>
         </dead_trial>
         <journey_forth>
             <label>前进的旅程</label>
@@ -2931,7 +2879,8 @@
             <tooltip><![CDATA[
             这些人太贪婪了, 是时候离开这里了.<br>需要城镇钥匙.
         ]]></tooltip>
-            <story_1><![CDATA[<b>Left the City:</b>⮀ While the Key to the City still looks like a gaudy prop, you're surprised to find that it actually works as a key on exactly one door: The tiny back door in the city walls with a lock that looks bigger than the door itself! Whatever the reason to put such imposing security on the single exit (other than the now entirely impermeable jungle) out of the City, you persevere as you head down the track heading towards where you expected to see a mountain. Strangely enough, you can't see any mountain peaks on the horizon...]]></story_1>
+            <story_1>
+                <![CDATA[<b>Left the City:</b>⮀ While the Key to the City still looks like a gaudy prop, you're surprised to find that it actually works as a key on exactly one door: The tiny back door in the city walls with a lock that looks bigger than the door itself! Whatever the reason to put such imposing security on the single exit (other than the now entirely impermeable jungle) out of the City, you persevere as you head down the track heading towards where you expected to see a mountain. Strangely enough, you can't see any mountain peaks on the horizon...]]></story_1>
         </leave_city>
         <!--town 9-->
         <imbue_soul>
